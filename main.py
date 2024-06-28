@@ -3,12 +3,19 @@ import random
 
 def main():
     total = 0
-    i = 0
     numbers = []
-    while (total <= 100):
-        numbers [i] = random.randint(0, 100)
-        total = sum(numbers)
-
+    randnum =0 
+    temptotal=0
+    while (total < 100):
+        randnum = random.randint(0,99)  
+        numbers.append(randnum)
+        if (temptotal+randnum > 100):
+            print(total, end='')
+            break
+        else:
+            
+            total = sum(numbers)
+            temptotal=total
 
     print(f'The random values are {numbers}')
     print(f'The total is {total}')
